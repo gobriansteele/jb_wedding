@@ -1,6 +1,8 @@
 .index-video-container {
   width: 100%;
   height: 100%;
+  position: fixed;
+  z-index: -100;
 }
 
 .index-video-container video {
@@ -11,6 +13,29 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.index-content-grid-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.index-content-container {
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-content-container h2 {
+  color: #fff;
+  font-size: 2rem;
 }
