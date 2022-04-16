@@ -1,5 +1,12 @@
 import type { MetaFunction } from '@remix-run/node'
+import type { LinksFunction } from '@remix-run/node'
 import { Links, LiveReload, Meta, Outlet } from '@remix-run/react'
+
+import stylesUrl from '~/styles/global.css'
+
+export const links: LinksFunction = () => {
+  return [{ rel: 'stylesheet', href: stylesUrl }]
+}
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
