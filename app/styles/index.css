@@ -3,6 +3,8 @@
   height: 100%;
   position: fixed;
   z-index: -100;
+  background-image: url('/assets/images/the_kiss.jpg');
+  background-size: cover;
 }
 
 .index-video-container video {
@@ -14,6 +16,11 @@
   width: auto;
   height: auto;
   transform: translateX(-50%) translateY(-50%);
+  transition: opacity 0.5s ease-in;
+}
+
+.index-video-container video.hidden {
+  opacity: 0;
 }
 
 .index-content-grid-container {
@@ -35,7 +42,42 @@
   align-items: center;
 }
 
-.index-content-container h2 {
+.index-headline {
+  color: #fff;
+  font-size: 8rem;
+  order: 1;
+  margin-block: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.index-content-container h2,
+h3 {
   color: #fff;
   font-size: 2rem;
+  margin: 0;
+}
+
+h2.index-subheadline {
+  order: 0;
+  margin-block-end: 20px;
+}
+
+.index-info {
+  order: 2;
+  margin-block-start: -40px;
+}
+
+@media screen and (min-width: 900px) {
+  .index-headline {
+    font-size: 12rem;
+  }
+
+  h2.index-subheadline {
+    margin-block-end: 40px;
+  }
+
+  .index-info {
+    margin-top: -50px;
+  }
 }

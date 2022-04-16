@@ -5,7 +5,10 @@ import { Links, LiveReload, Meta, Outlet, Scripts } from '@remix-run/react'
 import stylesUrl from '~/styles/global.css'
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: stylesUrl }]
+  return [
+    { rel: 'stylesheet', href: stylesUrl },
+    { rel: 'stylesheet', href: 'https://use.typekit.net/cpz2axi.css' },
+  ]
 }
 
 export const meta: MetaFunction = () => ({
