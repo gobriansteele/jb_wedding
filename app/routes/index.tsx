@@ -8,9 +8,19 @@ export const links: LinksFunction = () => {
 
 export default function IndexRoute() {
   return (
-    <img
-      src="/assets/images/jackie_ring_small-3.jpg"
-      alt="Jackie with a wedding magazine"
-    />
+    <div className="index-video-container">
+      <video
+        poster="/assets/images/wedding-poster.jpg"
+        id="bgvid"
+        playsInline
+        autoPlay
+        muted
+        loop
+      >
+        <source src="/assets/videos/proposal.webm" type="video/webm" />
+        <source src="/assets/videos/proposal.mp4" type="video/mp4" />
+        <p>Your browser does not support video</p>
+      </video>
+    </div>
   )
 }
