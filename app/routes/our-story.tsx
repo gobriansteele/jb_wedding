@@ -7,8 +7,12 @@ export const links: LinksFunction = () => {
 
 export default function OurStory() {
   return (
-    <div className="hero-image-wrap">
-      <div className="hero-image-overlay"></div>
-    </div>
+    <>
+      <div className="hero-image-wrap">
+        <div className="hero-image-overlay">
+          <h1 className="global-headline">Our Story</h1>
+        </div>
+      </div>
+    </>
   )
 }
