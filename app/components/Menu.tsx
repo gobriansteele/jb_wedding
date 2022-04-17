@@ -1,9 +1,8 @@
-import { Link, useMatches } from '@remix-run/react'
+import { NavLink } from '@remix-run/react'
 
 interface MenuItemProps {
   label: string
   route: string
-  isActive?: boolean
 }
 
 interface MenuProps {
@@ -11,30 +10,26 @@ interface MenuProps {
 }
 
 export function Menu({ items }: MenuProps) {
-  const [_, { pathname }] = useMatches()
-  console.log(pathname)
-
   return (
     <ul className="menu-wrap">
       {items.map((item) => {
         return (
-          <MenuItem
-            label={item.label}
-            route={item.route}
-            key={item.label}
-            isActive={pathname === item.route}
-          />
+          <MenuItem label={item.label} route={item.route} key={item.label} />
         )
       })}
     </ul>
   )
 }
 
-function MenuItem({ label, route, isActive }: MenuItemProps) {
-  console.log({ route, isActive })
+function MenuItem({ label, route }: MenuItemProps) {
   return (
-    <li className={`${isActive && 'menu-item-active'}`}>
-      <Link to={route}>{label}</Link>
+    <li>
+      <NavLink
+        className={({ isActive }) => (isActive ? 'nav-link-active' : undefined)}
+        to={route}
+      >
+        {label}
+      </NavLink>
     </li>
   )
 }

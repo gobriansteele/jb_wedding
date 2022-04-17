@@ -1,3 +1,5 @@
+import { Link } from '@remix-run/react'
+
 import { Menu } from './Menu'
 
 const links = [
@@ -23,7 +25,9 @@ export function Header() {
 export function Logo() {
   return (
     <div>
-      <h1 className="logo-text global-headline">Jackie &amp; Brian</h1>
+      <Link to="/">
+        <h1 className="logo-text global-headline">Jackie &amp; Brian</h1>
+      </Link>
     </div>
   )
 }

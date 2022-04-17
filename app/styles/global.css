@@ -70,6 +70,6 @@ ul.menu-wrap {
   margin-inline-start: 15px;
 }
 
-.menu-item-active {
+.nav-link-active {
   border-block-end: 3px rgb(124, 187, 142) solid;
 }
