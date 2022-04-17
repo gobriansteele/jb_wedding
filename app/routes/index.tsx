@@ -1,5 +1,7 @@
+import { useTransition, useLocation } from '@remix-run/react'
 import type { LinksFunction } from '@remix-run/node'
 import { useRef, useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 import stylesUrl from '~/styles/index.css'
 
@@ -8,6 +10,9 @@ export const links: LinksFunction = () => {
 }
 
 export default function IndexRoute() {
+  const transition = useTransition()
+  console.log(transition)
+  const location = useLocation()
   const videoElement = useRef<HTMLVideoElement>(null)
   const [isVideoComplete, setIsVideoComplete] = useState(false)
 

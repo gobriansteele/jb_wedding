@@ -1,9 +1,17 @@
 import type { MetaFunction } from '@remix-run/node'
 import type { LinksFunction } from '@remix-run/node'
-import { Links, LiveReload, Meta, Outlet, Scripts } from '@remix-run/react'
+import {
+  Links,
+  LiveReload,
+  Meta,
+  useOutlet,
+  useLocation,
+  Scripts,
+} from '@remix-run/react'
 
 import { Header } from './components/Header'
 import stylesUrl from '~/styles/global.css'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export const links: LinksFunction = () => {
   return [
@@ -19,6 +27,8 @@ export const meta: MetaFunction = () => ({
 })
 
 export default function App() {
+  const outlet = useOutlet()
+  const location = useLocation()
   return (
     <html lang="en">
       <head>
@@ -27,7 +37,17 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <Outlet />
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <motion.main
+            key={location.key}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            style={{ width: '100%', height: '100%' }}
+          >
+            {outlet}
+          </motion.main>
+        </AnimatePresence>
         <Scripts />
         <LiveReload />
       </body>

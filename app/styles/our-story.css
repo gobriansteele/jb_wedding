@@ -1,0 +1,13 @@
+.hero-image-wrap {
+  background: url('/assets/images/j_and_b_lake_phoenix.jpg') no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
