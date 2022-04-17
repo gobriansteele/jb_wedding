@@ -1,7 +1,12 @@
+html {
+  height: calc(100% - 60px);
+}
+
 .index-video-container {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
+  top: 0;
   z-index: -100;
   background-image: url('/assets/images/the_kiss.jpg');
   background-size: cover;
@@ -54,8 +59,9 @@
 .index-content-container h2,
 h3 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0;
+  font-weight: 300;
 }
 
 h2.index-subheadline {

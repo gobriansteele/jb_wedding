@@ -2,6 +2,7 @@ import type { MetaFunction } from '@remix-run/node'
 import type { LinksFunction } from '@remix-run/node'
 import { Links, LiveReload, Meta, Outlet, Scripts } from '@remix-run/react'
 
+import { Header } from './components/Header'
 import stylesUrl from '~/styles/global.css'
 
 export const links: LinksFunction = () => {
@@ -25,6 +26,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Header />
         <Outlet />
         <Scripts />
         <LiveReload />
