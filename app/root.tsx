@@ -28,7 +28,6 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   const outlet = useOutlet()
-  const location = useLocation()
   return (
     <html lang="en">
       <head>
@@ -39,11 +38,12 @@ export default function App() {
         <Header />
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.main
-            key={location.key}
+            key={useLocation().key}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             style={{ width: '100%', height: '100%' }}
+            transition={{ duration: 0.3 }}
           >
             {outlet}
           </motion.main>
