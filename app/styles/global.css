@@ -90,13 +90,19 @@ ul.menu-wrap {
   right: 0;
 }
 
-[data-reach-menu-list] {
-  display: flex;
+.mobile-menu-button {
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mobile-menu-wrap [data-reach-menu-items] {
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
 }
 
-[data-reach-menu-item] {
+.mobile-menu-wrap [data-reach-menu-item] {
   font-size: 2rem;
   text-align: center;
 }

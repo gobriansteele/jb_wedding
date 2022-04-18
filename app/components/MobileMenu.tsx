@@ -1,10 +1,11 @@
 import {
   Menu,
   MenuButton,
-  MenuList,
+  MenuItems,
   MenuLink,
   useMenuButtonContext,
 } from '@reach/menu-button'
+import '@reach/menu-button/styles.css'
 import { NavLink } from '@remix-run/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { MenuProps } from './Header'
@@ -27,8 +28,9 @@ export function MobileMenuLinks({ items }: MenuProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ delay: 0.2, duration: 0.25 }}
+            style={{ textAlign: 'center' }}
           >
-            <MenuList portal={false}>
+            <MenuItems>
               {items.map((item) => {
                 return (
                   <MenuLink
@@ -43,7 +45,7 @@ export function MobileMenuLinks({ items }: MenuProps) {
                   </MenuLink>
                 )
               })}
-            </MenuList>
+            </MenuItems>
           </motion.div>
         </motion.div>
       )}
