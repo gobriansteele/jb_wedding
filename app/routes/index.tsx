@@ -13,13 +13,13 @@ export default function IndexRoute() {
 
   useEffect(() => {
     const videoEl = videoElement.current
-    function logIt() {
+    function handleVideoEnd() {
       setIsVideoComplete(true)
     }
 
-    videoEl?.addEventListener('pause', logIt)
+    videoEl?.addEventListener('ended', handleVideoEnd)
     return () => {
-      videoEl?.removeEventListener('pause', logIt)
+      videoEl?.removeEventListener('ended', handleVideoEnd)
     }
   })
 
