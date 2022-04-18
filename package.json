@@ -9,6 +9,7 @@
     "dev": "remix dev"
   },
   "dependencies": {
+    "@reach/menu-button": "^0.16.2",
     "@remix-run/node": "^1.3.5",
     "@remix-run/react": "^1.3.5",
     "@remix-run/vercel": "^1.3.5",
