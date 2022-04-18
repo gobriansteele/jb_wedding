@@ -1,13 +1,5 @@
 import { NavLink } from '@remix-run/react'
-
-interface MenuItemProps {
-  label: string
-  route: string
-}
-
-interface MenuProps {
-  items: MenuItemProps[]
-}
+import type { MenuProps, MenuItemProps } from './Header'
 
 export function Menu({ items }: MenuProps) {
   return (

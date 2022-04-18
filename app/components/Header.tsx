@@ -1,7 +1,16 @@
 import { Link } from '@remix-run/react'
 
 import { Menu } from './Menu'
-import { MobileMenuButton } from './MobileMenu'
+import { MobileMenu } from './MobileMenu'
+
+export interface MenuItemProps {
+  label: string
+  route: string
+}
+
+export interface MenuProps {
+  items: MenuItemProps[]
+}
 
 const links = [
   {
@@ -19,7 +28,7 @@ export function Header() {
     <div className="header-wrap">
       <Logo />
       <Menu items={links} />
-      <MobileMenuButton />
+      <MobileMenu items={links} />
     </div>
   )
 }

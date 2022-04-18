@@ -1,7 +1,15 @@
-import { Menu, MenuButton, useMenuButtonContext } from '@reach/menu-button'
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuLink,
+  useMenuButtonContext,
+} from '@reach/menu-button'
+import { NavLink } from '@remix-run/react'
 import { AnimatePresence, motion } from 'framer-motion'
+import type { MenuProps } from './Header'
 
-export function MobileMenu() {
+export function MobileMenuLinks({ items }: MenuProps) {
   const { isExpanded } = useMenuButtonContext()
   return (
     <AnimatePresence>
@@ -13,13 +21,37 @@ export function MobileMenu() {
           exit={{ height: 0 }}
           transition={{ duration: 0.3 }}
           className="mobile-menu-wrap"
-        ></motion.div>
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.2, duration: 0.25 }}
+          >
+            <MenuList portal={false}>
+              {items.map((item) => {
+                return (
+                  <MenuLink
+                    as={NavLink}
+                    key={item.route}
+                    to={item.route}
+                    className={({ isActive }: { isActive: boolean }) =>
+                      isActive ? 'nav-link-active' : undefined
+                    }
+                  >
+                    {item.label}
+                  </MenuLink>
+                )
+              })}
+            </MenuList>
+          </motion.div>
+        </motion.div>
       )}
     </AnimatePresence>
   )
 }
 
-export function MobileMenuButton() {
+export function MobileMenu({ items }: MenuProps) {
   return (
     <>
       <Menu>
@@ -68,7 +100,7 @@ export function MobileMenuButton() {
                 </svg>
               </MenuButton>
 
-              <MobileMenu />
+              <MobileMenuLinks items={items} />
             </>
           )
         }}
