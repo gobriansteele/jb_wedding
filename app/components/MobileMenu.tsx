@@ -3,6 +3,7 @@ import {
   MenuButton,
   MenuItems,
   MenuLink,
+  MenuList,
   useMenuButtonContext,
 } from '@reach/menu-button'
 import '@reach/menu-button/styles.css'
@@ -30,22 +31,15 @@ export function MobileMenuLinks({ items }: MenuProps) {
             transition={{ delay: 0.2, duration: 0.25 }}
             style={{ textAlign: 'center' }}
           >
-            <MenuItems>
+            <MenuList portal={false}>
               {items.map((item) => {
                 return (
-                  <MenuLink
-                    as={NavLink}
-                    key={item.route}
-                    to={item.route}
-                    className={({ isActive }: { isActive: boolean }) =>
-                      isActive ? 'nav-link-active' : undefined
-                    }
-                  >
+                  <MenuLink as={NavLink} key={item.route} to={item.route}>
                     {item.label}
                   </MenuLink>
                 )
               })}
-            </MenuItems>
+            </MenuList>
           </motion.div>
         </motion.div>
       )}

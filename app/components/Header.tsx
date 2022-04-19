@@ -1,4 +1,4 @@
-import { Link } from '@remix-run/react'
+import { NavLink } from '@remix-run/react'
 
 import { Menu } from './Menu'
 import { MobileMenu } from './MobileMenu'
@@ -36,9 +36,9 @@ export function Header() {
 export function Logo() {
   return (
     <div>
-      <Link to="/">
+      <NavLink to="/">
         <h1 className="logo-text global-headline">Jackie &amp; Brian</h1>
-      </Link>
+      </NavLink>
     </div>
   )
 }

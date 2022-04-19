@@ -97,7 +97,7 @@ ul.menu-wrap {
 }
 
 .mobile-menu-wrap [data-reach-menu-items] {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
