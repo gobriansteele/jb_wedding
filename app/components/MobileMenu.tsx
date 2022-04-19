@@ -1,7 +1,6 @@
 import {
   Menu,
   MenuButton,
-  MenuItems,
   MenuLink,
   MenuList,
   useMenuButtonContext,
@@ -39,6 +38,7 @@ export function MobileMenuLinks({ items }: MenuProps) {
                   </MenuLink>
                 )
               })}
+              <div style={{ flexGrow: 5 }}></div>
             </MenuList>
           </motion.div>
         </motion.div>

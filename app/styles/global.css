@@ -88,6 +88,7 @@ ul.menu-wrap {
   left: 0;
   bottom: 0;
   right: 0;
+  height: calc(100vh - 60px);
 }
 
 .mobile-menu-button {
@@ -96,10 +97,11 @@ ul.menu-wrap {
   cursor: pointer;
 }
 
-.mobile-menu-wrap [data-reach-menu-items] {
+.mobile-menu-wrap [data-reach-menu-list] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: calc(100vh - 60px);
 }
 
 .mobile-menu-wrap [data-reach-menu-item] {
