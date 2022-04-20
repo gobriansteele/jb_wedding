@@ -36,14 +36,14 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <AnimatePresence exitBeforeEnter initial={false}>
+        <AnimatePresence exitBeforeEnter={true} initial={false}>
           <motion.main
             key={useLocation().key}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            style={{ width: '100%', height: '100%' }}
-            transition={{ duration: 0.3 }}
+            style={{ height: '100%' }}
+            transition={{ duration: 0.2 }}
           >
             {outlet}
           </motion.main>
