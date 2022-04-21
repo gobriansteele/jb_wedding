@@ -9,7 +9,6 @@ export const links: LinksFunction = () => {
 
 export default function IndexRoute() {
   const videoElement = useRef<HTMLVideoElement>(null)
-  const videoStarted = useRef(false)
 
   const [isVideoComplete, setIsVideoComplete] = useState(false)
 
@@ -17,9 +16,7 @@ export default function IndexRoute() {
     const videoEl = videoElement.current
 
     function handleVideoEnd() {
-      if (videoStarted.current) {
-        setIsVideoComplete(true)
-      }
+      setIsVideoComplete(true)
     }
 
     videoEl?.addEventListener("ended", handleVideoEnd)
