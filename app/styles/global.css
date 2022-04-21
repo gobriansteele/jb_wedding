@@ -207,3 +207,54 @@ ul.menu-wrap {
   background-image: url('/assets/images/brian_closeup.jpg');
   background-size: contain;
 }
+
+/** TimelineItem Styles */
+.timeline-item-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.timeline-item-title {
+  font-family: hummingbird, sans-serif;
+  font-size: 5rem;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  color: rgb(124, 187, 142);
+}
+
+.timeline-item-switch-wrap {
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.timeline-item-switch-wrap h3 {
+  font-size: 2rem;
+  margin-inline-start: 30px;
+  font-weight: 600;
+  color: #9e9e9e;
+}
+
+.timeline-item-description {
+  font-size: 1.25rem;
+}
+
+.decoration::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.45rem;
+  width: calc(60% + 0.5rem);
+  transform-origin: top left;
+  transform: skew(-30deg);
+  background: rgb(124, 187, 142);
+  z-index: -1;
+  opacity: 0.9;
+  margin-inline: auto;
+}

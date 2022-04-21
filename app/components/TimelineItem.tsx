@@ -18,9 +18,18 @@ export function TimelineItem({ title, descriptions, image }: TimelineItemProp) {
 
   return (
     <div className="timeline-item-wrap">
-      <h2 className="timeline-item-title">{title}</h2>
-      <Switch onChange={handleSwitchChange} />
-      <p>{isBrian ? "Brian's Story" : "Jackie's Story"}</p>
+      <div>
+        <h2 className="timeline-item-title decoration">{title}</h2>
+      </div>
+      <div className="timeline-item-switch-wrap">
+        <Switch onChange={handleSwitchChange} />
+        <h3>{isBrian ? "Brian's " : "Jackie's "} version</h3>
+      </div>
+      <div>
+        <p className="timeline-item-description">
+          {isBrian ? descriptions.brian : descriptions.jackie}
+        </p>
+      </div>
     </div>
   )
 }

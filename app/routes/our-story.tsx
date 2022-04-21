@@ -1,18 +1,8 @@
 import type { LinksFunction } from '@remix-run/node'
 import stylesUrl from '~/styles/our-story.css'
 
+import { OUR_STORY_ITEMS } from '~/data/ourStory'
 import { TimelineItem } from '~/components/TimelineItem'
-
-const TIMELINE_ITEMS = [
-  {
-    title: 'How We Met',
-    descriptions: {
-      jackie: 'some text',
-      brian: 'some text',
-    },
-    image: '',
-  },
-]
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesUrl }]
@@ -27,7 +17,16 @@ export default function OurStory() {
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <TimelineItem {...TIMELINE_ITEMS[0]} />
+        {OUR_STORY_ITEMS.map((story) => {
+          return (
+            <div key={story.title} style={{ marginTop: '50px;' }}>
+              <TimelineItem
+                title={story.title}
+                descriptions={story.descriptions}
+              />
+            </div>
+          )
+        })}
       </div>
     </>
   )
