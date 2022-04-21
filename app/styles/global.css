@@ -226,6 +226,15 @@ ul.menu-wrap {
   color: rgb(124, 187, 142);
 }
 
+.timeline-item-date-wrap {
+  text-align: center;
+}
+
+.timeline-item-date {
+  color: rgb(124, 187, 142);
+  font-size: 1.25rem;
+}
+
 .timeline-item-switch-wrap {
   display: flex;
   align-items: center;
@@ -241,6 +250,7 @@ ul.menu-wrap {
 
 .timeline-item-description {
   font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 .decoration::after {

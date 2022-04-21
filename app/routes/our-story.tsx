@@ -16,13 +16,21 @@ export default function OurStory() {
           <h1 className="global-headline">Our Story</h1>
         </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        }}
+      >
         {OUR_STORY_ITEMS.map((story) => {
           return (
-            <div key={story.title} style={{ marginTop: '50px;' }}>
+            <div key={story.title} className="our-story-item-wrap">
               <TimelineItem
                 title={story.title}
-                descriptions={story.descriptions}
+                descriptions={story.descriptions || undefined}
+                date={story.date}
+                summary={story.summary}
               />
             </div>
           )
