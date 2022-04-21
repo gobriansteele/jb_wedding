@@ -7,21 +7,29 @@ html {
   height: 100%;
   position: absolute;
   top: 0;
+  background-position: center;
   z-index: -100;
   background-image: url("/assets/images/the_kiss.jpg");
   background-size: cover;
 }
 
 .index-video-container video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%) translateY(-50%);
-  transition: opacity 0.5s ease-in;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .index-video-container video {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    transition: opacity 0.5s ease-in;
+  }
 }
 
 .index-video-container video.hidden {

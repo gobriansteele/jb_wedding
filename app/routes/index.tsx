@@ -16,11 +16,6 @@ export default function IndexRoute() {
   useEffect(() => {
     const videoEl = videoElement.current
 
-    function handleVideoStart() {
-      videoStarted.current = true
-      console.log("started")
-    }
-
     function handleVideoEnd() {
       if (videoStarted.current) {
         setIsVideoComplete(true)
@@ -28,10 +23,8 @@ export default function IndexRoute() {
     }
 
     videoEl?.addEventListener("ended", handleVideoEnd)
-    videoEl?.addEventListener("play", handleVideoStart)
     return () => {
       videoEl?.removeEventListener("ended", handleVideoEnd)
-      videoEl?.removeEventListener("play", handleVideoStart)
     }
   })
 
