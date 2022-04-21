@@ -1,27 +1,27 @@
-import type { LinksFunction } from '@remix-run/node'
-import { useRef, useEffect, useState } from 'react'
+import type { LinksFunction } from "@remix-run/node";
+import { useRef, useEffect, useState } from "react";
 
-import stylesUrl from '~/styles/index.css'
+import stylesUrl from "~/styles/index.css";
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: stylesUrl }]
-}
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export default function IndexRoute() {
-  const videoElement = useRef<HTMLVideoElement>(null)
-  const [isVideoComplete, setIsVideoComplete] = useState(false)
+  const videoElement = useRef<HTMLVideoElement>(null);
+  const [isVideoComplete, setIsVideoComplete] = useState(false);
 
   useEffect(() => {
-    const videoEl = videoElement.current
+    const videoEl = videoElement.current;
     function handleVideoEnd() {
-      setIsVideoComplete(true)
+      setIsVideoComplete(true);
     }
 
-    videoEl?.addEventListener('ended', handleVideoEnd)
+    videoEl?.addEventListener("ended", handleVideoEnd);
     return () => {
-      videoEl?.removeEventListener('ended', handleVideoEnd)
-    }
-  })
+      videoEl?.removeEventListener("ended", handleVideoEnd);
+    };
+  });
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function IndexRoute() {
         <video
           ref={videoElement}
           poster="/assets/images/wedding_poster.jpg"
-          className={`${isVideoComplete ? 'hidden' : undefined}`}
+          className={`${isVideoComplete ? "hidden" : undefined}`}
           playsInline
           autoPlay
           muted
@@ -50,5 +50,5 @@ export default function IndexRoute() {
         </div>
       </div>
     </>
-  )
+  );
 }

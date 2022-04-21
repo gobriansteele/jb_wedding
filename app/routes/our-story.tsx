@@ -1,12 +1,12 @@
-import type { LinksFunction } from '@remix-run/node'
-import stylesUrl from '~/styles/our-story.css'
+import type { LinksFunction } from "@remix-run/node";
+import stylesUrl from "~/styles/our-story.css";
 
-import { OUR_STORY_ITEMS } from '~/data/ourStory'
-import { TimelineItem } from '~/components/TimelineItem'
+import { OUR_STORY_ITEMS } from "~/data/ourStory";
+import { TimelineItem } from "~/components/TimelineItem";
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: stylesUrl }]
-}
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export default function OurStory() {
   return (
@@ -18,9 +18,9 @@ export default function OurStory() {
       </div>
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         {OUR_STORY_ITEMS.map((story) => {
@@ -33,9 +33,9 @@ export default function OurStory() {
                 summary={story.summary}
               />
             </div>
-          )
+          );
         })}
       </div>
     </>
-  )
+  );
 }

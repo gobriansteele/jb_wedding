@@ -1,5 +1,5 @@
 .hero-image-wrap {
-  background: url('/assets/images/j_and_b_lake_phoenix.jpg') no-repeat;
+  background: url("/assets/images/j_and_b_lake_phoenix.jpg") no-repeat;
   background-size: cover;
   background-position-x: 50%;
   width: 100%;

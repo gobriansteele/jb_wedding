@@ -184,13 +184,13 @@ ul.menu-wrap {
 }
 
 .switch-wrap > input::before {
-  content: '';
+  content: "";
   grid-area: track;
   inline-size: var(--thumb-size);
   block-size: var(--thumb-size);
 
   transform: translateX(var(--thumb-position));
-  background-image: url('/assets/images/jackie_closeup.jpg');
+  background-image: url("/assets/images/jackie_closeup.jpg");
   background-size: contain;
   border-radius: 50%;
 
@@ -204,7 +204,7 @@ ul.menu-wrap {
 }
 
 .switch-wrap > input:checked::before {
-  background-image: url('/assets/images/brian_closeup.jpg');
+  background-image: url("/assets/images/brian_closeup.jpg");
   background-size: contain;
 }
 
@@ -254,7 +254,7 @@ ul.menu-wrap {
 }
 
 .decoration::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0.5rem;
   left: 0;

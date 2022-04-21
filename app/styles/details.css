@@ -1,5 +1,5 @@
 .hero-image-wrap {
-  background: url('/assets/images/tre_posti.jpg') no-repeat;
+  background: url("/assets/images/tre_posti.jpg") no-repeat;
   background-size: cover;
   background-position-y: center;
   width: 100%;

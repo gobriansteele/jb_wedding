@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 interface SwitchProps {
-  onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void
+  onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export function Switch({ onChange }: SwitchProps) {
@@ -11,5 +11,5 @@ export function Switch({ onChange }: SwitchProps) {
         <input type="checkbox" id="switch" onChange={onChange} />
       </label>
     </div>
-  )
+  );
 }

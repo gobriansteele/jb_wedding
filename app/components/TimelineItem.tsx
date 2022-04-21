@@ -1,5 +1,5 @@
-import React from 'react'
-import { Switch } from './Switch'
+import React from "react"
+import { Switch } from "./Switch"
 
 interface TimelineItemProp {
   title: string

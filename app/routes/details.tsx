@@ -1,9 +1,9 @@
-import type { LinksFunction } from '@remix-run/node'
-import stylesUrl from '~/styles/details.css'
+import type { LinksFunction } from "@remix-run/node";
+import stylesUrl from "~/styles/details.css";
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: stylesUrl }]
-}
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export default function OurStory() {
   return (
@@ -14,5 +14,5 @@ export default function OurStory() {
         </div>
       </div>
     </>
-  )
+  );
 }

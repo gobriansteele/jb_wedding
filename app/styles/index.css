@@ -8,7 +8,7 @@ html {
   position: absolute;
   top: 0;
   z-index: -100;
-  background-image: url('/assets/images/the_kiss.jpg');
+  background-image: url("/assets/images/the_kiss.jpg");
   background-size: cover;
 }
 

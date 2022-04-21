@@ -1,5 +1,5 @@
-import type { MetaFunction } from '@remix-run/node'
-import type { LinksFunction } from '@remix-run/node'
+import type { MetaFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,27 +7,27 @@ import {
   useOutlet,
   useLocation,
   Scripts,
-} from '@remix-run/react'
+} from "@remix-run/react";
 
-import { Header } from './components/Header'
-import stylesUrl from '~/styles/global.css'
-import { AnimatePresence, motion } from 'framer-motion'
+import { Header } from "./components/Header";
+import stylesUrl from "~/styles/global.css";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const links: LinksFunction = () => {
   return [
-    { rel: 'stylesheet', href: stylesUrl },
-    { rel: 'stylesheet', href: 'https://use.typekit.net/cpz2axi.css' },
-  ]
-}
+    { rel: "stylesheet", href: stylesUrl },
+    { rel: "stylesheet", href: "https://use.typekit.net/cpz2axi.css" },
+  ];
+};
 
 export const meta: MetaFunction = () => ({
-  charset: 'utf-8',
-  title: 'New Remix App',
-  viewport: 'width=device-width,initial-scale=1',
-})
+  charset: "utf-8",
+  title: "New Remix App",
+  viewport: "width=device-width,initial-scale=1",
+});
 
 export default function App() {
-  const outlet = useOutlet()
+  const outlet = useOutlet();
   return (
     <html lang="en">
       <head>
@@ -42,7 +42,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            style={{ height: '100%' }}
+            style={{ height: "100%" }}
             transition={{ duration: 0.2 }}
           >
             {outlet}
@@ -52,5 +52,5 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  )
+  );
 }

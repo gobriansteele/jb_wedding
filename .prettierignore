@@ -1,0 +1,11 @@
+# Artifacts
+/public
+
+# Remix things
+/api
+
+# Dots
+.vscode
+.cache
+
+/node_modules

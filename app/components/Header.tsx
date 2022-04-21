@@ -1,27 +1,27 @@
-import { NavLink } from '@remix-run/react'
+import { NavLink } from "@remix-run/react";
 
-import { Menu } from './Menu'
-import { MobileMenu } from './MobileMenu'
+import { Menu } from "./Menu";
+import { MobileMenu } from "./MobileMenu";
 
 export interface MenuItemProps {
-  label: string
-  route: string
+  label: string;
+  route: string;
 }
 
 export interface MenuProps {
-  items: MenuItemProps[]
+  items: MenuItemProps[];
 }
 
 const links = [
   {
-    label: 'OUR STORY',
-    route: '/our-story',
+    label: "OUR STORY",
+    route: "/our-story",
   },
   {
-    label: 'DETAILS',
-    route: '/details',
+    label: "DETAILS",
+    route: "/details",
   },
-]
+];
 
 export function Header() {
   return (
@@ -30,7 +30,7 @@ export function Header() {
       <Menu items={links} />
       <MobileMenu items={links} />
     </div>
-  )
+  );
 }
 
 export function Logo() {
@@ -40,5 +40,5 @@ export function Logo() {
         <h1 className="logo-text global-headline">Jackie &amp; Brian</h1>
       </NavLink>
     </div>
-  )
+  );
 }
