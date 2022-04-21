@@ -58,6 +58,10 @@ a:hover {
 }
 
 /** Menu Component */
+:root {
+  --reach-menu-button: 1;
+}
+
 ul.menu-wrap {
   display: none;
   margin: 0;
@@ -95,6 +99,7 @@ ul.menu-wrap {
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
+  color: rgb(124, 187, 142);
 }
 
 .mobile-menu-wrap [data-reach-menu-list] {
@@ -111,6 +116,11 @@ ul.menu-wrap {
 
 .mobile-menu-wrap [data-reach-menu-item]:not(:last-child) {
   margin-block-end: 20px;
+}
+
+.lock-overflow {
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 @media screen and (min-width: 650px) {

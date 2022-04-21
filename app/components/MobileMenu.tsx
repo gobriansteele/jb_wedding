@@ -1,17 +1,26 @@
+import { useEffect } from "react"
 import {
   Menu,
   MenuButton,
   MenuLink,
   MenuList,
   useMenuButtonContext,
-} from "@reach/menu-button";
-import "@reach/menu-button/styles.css";
-import { NavLink } from "@remix-run/react";
-import { AnimatePresence, motion } from "framer-motion";
-import type { MenuProps } from "./Header";
+} from "@reach/menu-button"
+import "@reach/menu-button/styles.css"
+import { NavLink } from "@remix-run/react"
+import { AnimatePresence, motion } from "framer-motion"
+import type { MenuProps } from "./Header"
 
 export function MobileMenuLinks({ items }: MenuProps) {
-  const { isExpanded } = useMenuButtonContext();
+  const { isExpanded } = useMenuButtonContext()
+  useEffect(() => {
+    if (isExpanded) {
+      document.querySelector("html")?.classList.add("lock-overflow")
+    } else {
+      document.querySelector("html")?.classList.remove("lock-overflow")
+    }
+  }, [isExpanded])
+
   return (
     <AnimatePresence>
       {isExpanded && (
@@ -36,7 +45,7 @@ export function MobileMenuLinks({ items }: MenuProps) {
                   <MenuLink as={NavLink} key={item.route} to={item.route}>
                     {item.label}
                   </MenuLink>
-                );
+                )
               })}
               <div style={{ flexGrow: 5 }}></div>
             </MenuList>
@@ -44,7 +53,7 @@ export function MobileMenuLinks({ items }: MenuProps) {
         </motion.div>
       )}
     </AnimatePresence>
-  );
+  )
 }
 
 export function MobileMenu({ items }: MenuProps) {
@@ -52,7 +61,7 @@ export function MobileMenu({ items }: MenuProps) {
     <>
       <Menu>
         {({ isExpanded }) => {
-          const state = isExpanded ? "open" : "closed";
+          const state = isExpanded ? "open" : "closed"
           return (
             <>
               <MenuButton className="mobile-menu-button">
@@ -98,24 +107,24 @@ export function MobileMenu({ items }: MenuProps) {
 
               <MobileMenuLinks items={items} />
             </>
-          );
+          )
         }}
       </Menu>
     </>
-  );
+  )
 }
 
 const topVariants = {
   open: { rotate: 45, y: 7 },
   closed: { rotate: 0, y: 0 },
-};
+}
 
 const centerVariants = {
   open: { opacity: 0 },
   closed: { opacity: 1 },
-};
+}
 
 const bottomVariants = {
   open: { rotate: -45, y: -5 },
   closed: { rotate: 0, y: 0 },
-};
+}
