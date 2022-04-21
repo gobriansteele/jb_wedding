@@ -9,18 +9,29 @@ export const links: LinksFunction = () => {
 
 export default function IndexRoute() {
   const videoElement = useRef<HTMLVideoElement>(null)
+  const videoStarted = useRef(false)
+
   const [isVideoComplete, setIsVideoComplete] = useState(false)
 
   useEffect(() => {
     const videoEl = videoElement.current
+
+    function handleVideoStart() {
+      videoStarted.current = true
+      console.log("started")
+    }
+
     function handleVideoEnd() {
-      console.log("ended event")
-      setIsVideoComplete(true)
+      if (videoStarted.current) {
+        setIsVideoComplete(true)
+      }
     }
 
     videoEl?.addEventListener("ended", handleVideoEnd)
+    videoEl?.addEventListener("play", handleVideoStart)
     return () => {
       videoEl?.removeEventListener("ended", handleVideoEnd)
+      videoEl?.removeEventListener("play", handleVideoStart)
     }
   })
 
