@@ -179,7 +179,8 @@ ul.menu-wrap {
   padding: var(--track-padding);
   background: var(--track-color-inactive);
   inline-size: var(--track-size);
-  block-size: var(--thumb-size);
+  /* block-size: var(--thumb-size); */
+  block-size: 40px;
   border-radius: var(--track-size);
 }
 
@@ -189,7 +190,7 @@ ul.menu-wrap {
   inline-size: var(--thumb-size);
   block-size: var(--thumb-size);
 
-  transform: translateX(var(--thumb-position));
+  transform: translateX(var(--thumb-position)) translateY(-20px);
   background-image: url("/assets/images/jackie_closeup.jpg");
   background-size: contain;
   border-radius: 50%;
