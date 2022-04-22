@@ -80,6 +80,24 @@ h2.index-subheadline {
 .index-info {
   order: 2;
   margin-block-start: -40px;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  animation: 4s ease-in 6s 1 fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 900px) {
