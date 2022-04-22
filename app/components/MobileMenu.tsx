@@ -16,8 +16,10 @@ export function MobileMenuLinks({ items }: MenuProps) {
   useEffect(() => {
     if (isExpanded) {
       document.querySelector("html")?.classList.add("lock-overflow")
+      document.querySelector("body")?.classList.add("lock-overflow")
     } else {
       document.querySelector("html")?.classList.remove("lock-overflow")
+      document.querySelector("body")?.classList.remove("lock-overflow")
     }
   }, [isExpanded])
 

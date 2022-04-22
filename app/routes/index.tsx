@@ -16,7 +16,7 @@ export default function IndexRoute() {
   useEffect(() => {
     const isAtLeast768px = window.matchMedia("(min-width: 768px)")
     setShouldShowVideo(isAtLeast768px.matches)
-  })
+  }, [setShouldShowVideo])
 
   useEffect(() => {
     const videoEl = videoElement.current
@@ -44,16 +44,16 @@ export default function IndexRoute() {
             poster="/assets/images/wedding_poster.jpg"
             className={`${isVideoComplete ? "hidden" : undefined}`}
             playsInline
-            autoPlay
+            preload="auto"
             muted
           >
             <source
-              src="/assets/videos/marriage_proposal.webm"
-              type="video/webm"
-            />
-            <source
               src="/assets/videos/marriage_proposal.mp4"
               type="video/mp4"
+            />
+            <source
+              src="/assets/videos/marriage_proposal.webm"
+              type="video/webm"
             />
             <p>Your browser does not support video</p>
           </video>
