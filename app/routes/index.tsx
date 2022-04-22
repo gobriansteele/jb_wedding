@@ -44,6 +44,7 @@ export default function IndexRoute() {
             poster="/assets/images/wedding_poster.jpg"
             className={`${isVideoComplete ? "hidden" : undefined}`}
             playsInline
+            autoPlay
             preload="auto"
             muted
           >
