@@ -283,3 +283,8 @@ ul.menu-wrap {
   opacity: 0.9;
   margin-inline: auto;
 }
+
+/** Utilities */
+.bold {
+  font-weight: 600;
+}
