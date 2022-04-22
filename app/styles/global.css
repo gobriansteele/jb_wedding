@@ -96,10 +96,14 @@ ul.menu-wrap {
 }
 
 .mobile-menu-button {
+  padding: 0;
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
   color: rgb(124, 187, 142);
+  border: 2px solid rgb(124, 187, 142);
+  width: 48px;
+  height: 48px;
 }
 
 .mobile-menu-wrap [data-reach-menu-list] {
