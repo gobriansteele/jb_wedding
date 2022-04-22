@@ -10,7 +10,13 @@ export const links: LinksFunction = () => {
 export default function IndexRoute() {
   const videoElement = useRef<HTMLVideoElement>(null)
 
+  const [shouldShowVideo, setShouldShowVideo] = useState(false)
   const [isVideoComplete, setIsVideoComplete] = useState(false)
+
+  useEffect(() => {
+    const isAtLeast768px = window.matchMedia("(min-width: 768px)")
+    setShouldShowVideo(isAtLeast768px.matches)
+  })
 
   useEffect(() => {
     const videoEl = videoElement.current
@@ -27,22 +33,31 @@ export default function IndexRoute() {
 
   return (
     <>
-      <div className="index-video-container">
-        <video
-          ref={videoElement}
-          poster="/assets/images/wedding_poster.jpg"
-          className={`${isVideoComplete ? "hidden" : undefined}`}
-          playsInline
-          autoPlay
-          muted
-        >
-          <source
-            src="/assets/videos/marriage_proposal.webm"
-            type="video/webm"
-          />
-          <source src="/assets/videos/marriage_proposal.mp4" type="video/mp4" />
-          <p>Your browser does not support video</p>
-        </video>
+      <div
+        className={`index-video-container ${
+          (isVideoComplete || !shouldShowVideo) && "video-not-playing"
+        }`}
+      >
+        {shouldShowVideo && (
+          <video
+            ref={videoElement}
+            poster="/assets/images/wedding_poster.jpg"
+            className={`${isVideoComplete ? "hidden" : undefined}`}
+            playsInline
+            autoPlay
+            muted
+          >
+            <source
+              src="/assets/videos/marriage_proposal.webm"
+              type="video/webm"
+            />
+            <source
+              src="/assets/videos/marriage_proposal.mp4"
+              type="video/mp4"
+            />
+            <p>Your browser does not support video</p>
+          </video>
+        )}
       </div>
       <div className="index-content-grid-container">
         <div className="index-content-container">

@@ -9,8 +9,11 @@ html {
   top: 0;
   background-position: center;
   z-index: -100;
-  background-image: url("/assets/images/the_kiss.jpg");
   background-size: cover;
+}
+
+.video-not-playing {
+  background-image: url("/assets/images/the_kiss.jpg");
 }
 
 .index-video-container video {
