@@ -1,15 +1,15 @@
-import { NavLink } from "@remix-run/react";
+import { NavLink } from "@remix-run/react"
 
-import { Menu } from "./Menu";
-import { MobileMenu } from "./MobileMenu";
+import { Menu } from "./Menu"
+import { MobileMenu } from "./MobileMenu"
 
 export interface MenuItemProps {
-  label: string;
-  route: string;
+  label: string
+  route: string
 }
 
 export interface MenuProps {
-  items: MenuItemProps[];
+  items: MenuItemProps[]
 }
 
 const links = [
@@ -21,7 +21,7 @@ const links = [
     label: "DETAILS",
     route: "/details",
   },
-];
+]
 
 export function Header() {
   return (
@@ -30,15 +30,15 @@ export function Header() {
       <Menu items={links} />
       <MobileMenu items={links} />
     </div>
-  );
+  )
 }
 
 export function Logo() {
   return (
     <div>
       <NavLink to="/">
-        <h1 className="logo-text global-headline">Jackie &amp; Brian</h1>
+        <h1 className="logo-text">Jackie &amp; Brian</h1>
       </NavLink>
     </div>
-  );
+  )
 }
