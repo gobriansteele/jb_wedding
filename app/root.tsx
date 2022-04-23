@@ -10,14 +10,13 @@ import {
 } from "@remix-run/react"
 
 import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
 import stylesUrl from "~/styles/global.css"
 import { AnimatePresence, motion } from "framer-motion"
-import reachStylesUrl from "@reach/menu-button/styles.css"
 
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: stylesUrl },
-    // { rel: "stylesheet", href: reachStylesUrl },
     { rel: "stylesheet", href: "https://use.typekit.net/cpz2axi.css" },
   ]
 }
@@ -30,6 +29,8 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   const outlet = useOutlet()
+  const isNotHomePage = useLocation().pathname !== "/"
+
   return (
     <html lang="en">
       <head>
@@ -44,12 +45,12 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            style={{ height: "100%" }}
             transition={{ duration: 0.2 }}
           >
             {outlet}
           </motion.main>
         </AnimatePresence>
+        {isNotHomePage && <Footer />}
         <Scripts />
         <LiveReload />
       </body>
