@@ -23,10 +23,10 @@ export default function OurStory() {
             94574. There is plenty of parking and it is free.
           </p>
           <p>
-            The ceremony will be at the Tre Posti Vineyard, followed by a
-            cocktail hour and dinner at the Tre Posti Vignetto and Garden Grove
-            lawn. We'll end the night with a kickin' dance party in the Tre
-            Posti Harvest Room, just a short walk away.
+            The ceremony will take place by the vineyard, followed by a cocktail
+            hour in the Vignetto, and dinner on the Garden Grove lawn. We'll end
+            the night with a kickin' dance party in the Tre Posti Harvest Room,
+            just a short walk away.
           </p>
         </div>
         <div className="details-content-wrap">
@@ -34,14 +34,14 @@ export default function OurStory() {
           <h3 className="details-subheading">Date</h3>
           <p>Sunday, April 2nd, 2023</p>
           <h3 className="details-subheading">Time</h3>
-          <p>The ceremony beings at 4:00PM</p>
+          <p>The ceremony begins at 4:00PM</p>
           <p>Arrive as early as 3:30PM</p>
         </div>
         <div className="details-content-wrap">
           <h2 className="details-section-heading">How</h2>
           <h3 className="details-subheading">Travel</h3>
           <p>
-            For our out of town guests, you can fly into one of the 3 following
+            For our out of town guests, you can fly into one of the following
             airports:
           </p>
           <ul className="details-airport-list">
@@ -49,10 +49,9 @@ export default function OurStory() {
             <li>Oakland (OAK)</li>
             <li>Sacramento (SMF)</li>
           </ul>
-          <p className="bold">
-            ** Hotel information coming in the summer of 2022 **
-          </p>
-          <h3 className="details-subheading">What to wear</h3>
+          <h3 className="details-subheading">Accommodations</h3>
+          <p>Hotel information coming in the summer of 2022</p>
+          <h3 className="details-subheading">Attire</h3>
           <p>
             The event is semi-formal, but anything you want to wear we are sure
             will be ok. The bride requests you refrain from wearing a wedding
@@ -62,6 +61,14 @@ export default function OurStory() {
             dinner will be outside and the reception will be inside, so be sure
             to bring a sweater or light jacket just in case. And don't forget
             your sunglasses!
+          </p>
+        </div>
+        <div className="details-content-wrap">
+          <h2 className="details-section-heading">Questions</h2>
+          <h3 className="details-subheading">Contact us</h3>
+          <p>
+            Any questions about the above?{" "}
+            <a href="mailto:weddingofsteele2023@gmail.com">Send us an email</a>
           </p>
         </div>
       </div>
