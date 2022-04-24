@@ -46,6 +46,7 @@ export default function App() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
+            style={!isNotHomePage ? { height: "100%" } : undefined}
           >
             {outlet}
           </motion.main>
