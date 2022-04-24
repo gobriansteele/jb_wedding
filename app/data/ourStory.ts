@@ -38,12 +38,12 @@ export const OUR_STORY_ITEMS = [
     title: "Roommates",
     date: "October 2017",
     summary: `After much research, we moved to Latitude 45 in downtown Minneapolis. A favorite memory of this place was on Valentines 
-      Day 2019 when Jackie came home from work and Brian was riding his bike on the inddor turbo-trainer in the living room. 
+      Day 2019 when Jackie came home from work and Brian was riding his bike on the indoor turbo-trainer in the living room. 
       Needless to say, Jackie was not impressed with Brian's wattage output or intensity.`,
   },
   {
     title: "Moved to California",
-    date: "July/September 2019",
+    date: "July 2019",
     summary: `We were extremely tired of Minnesota winters. We had narrowed our choices down to Seattle or San Francisco. We first travelled 
       to Seattle to check it out and we really enjoyed it and thought that would be our destination. However, about 6 weeks later we 
       took a trip to visit our great friends Jim & Jane Geppert in San Francisco, and within 2 days, Jackie had decided that San Francisco was the place.`,
