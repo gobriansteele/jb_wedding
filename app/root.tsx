@@ -18,12 +18,13 @@ export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: stylesUrl },
     { rel: "stylesheet", href: "https://use.typekit.net/cpz2axi.css" },
+    { rel: "icon", href: "/favicon.png" },
   ]
 }
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Jackie & Brian",
   viewport: "width=device-width,initial-scale=1",
 })
 
