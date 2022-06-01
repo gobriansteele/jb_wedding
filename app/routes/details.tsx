@@ -20,7 +20,7 @@ export default function OurStory() {
           <p>
             Our celebration will take place at the beautiful Tre Posti in the
             famous Napa Valley. The address is 641 Main Street, St. Helena, CA
-            94574. There is plenty of parking and it is free.
+            94574. There is plenty of parking and it is free. foo
           </p>
           <p>
             The ceremony will take place by the vineyard, followed by a cocktail
