@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif, sans-serif;
+  font-family: freight-sans-pro, sans-serif;
   font-weight: 400;
 }
 
@@ -75,7 +75,6 @@ ul.menu-wrap {
 
 .menu-wrap li {
   font-weight: 600;
-  font-family: freight-sans-pro, sans-serif;
   font-size: 16px;
   transition: border 0.3s;
 }
