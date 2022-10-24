@@ -1,11 +1,15 @@
-import type { MetaFunction } from "@remix-run/node"
-import type { LinksFunction } from "@remix-run/node"
+import type {
+  MetaFunction,
+  LinksFunction,
+  LoaderFunction,
+} from "@remix-run/node"
 import {
   Links,
   LiveReload,
   Meta,
   useOutlet,
   useLocation,
+  useLoaderData,
   Scripts,
 } from "@remix-run/react"
 
@@ -28,7 +32,17 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 })
 
+export const loader: LoaderFunction = () => {
+  return {
+    env: {
+      SUPABASE_URL: process.env.SUPABASE_URL,
+      SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
+    },
+  }
+}
+
 export default function App() {
+  const { env } = useLoaderData<Window>()
   const outlet = useOutlet()
   const isNotHomePage = useLocation().pathname !== "/"
 
@@ -53,6 +67,11 @@ export default function App() {
           </motion.main>
         </AnimatePresence>
         {isNotHomePage && <Footer />}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.env = ${JSON.stringify(env)}`,
+          }}
+        />
         <Scripts />
         <LiveReload />
       </body>

@@ -29,25 +29,27 @@
 }
 
 .details-content-wrap p {
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.25;
   margin-block-end: 20px;
+  margin-block-start: 0;
 }
 
 .details-section-heading {
   position: relative;
-  font-family: hummingbird, sans-serif;
+  font-family: Tangerine, sans-serif;
   color: rgb(124, 187, 142);
   font-size: 5rem;
-  text-align: center;
   margin: 0;
   line-height: 1;
 }
 
 .details-subheading {
-  font-weight: 600;
+  font-family: freight-sans-pro, sans-serif;
+  font-weight: 400;
   font-size: 1.75rem;
   margin: 0;
+  margin-block-start: 15px;
 }
 
 .details-section-heading::after {
@@ -57,7 +59,7 @@
   right: 0;
   bottom: 0.5rem;
   height: 0.25rem;
-  width: 125px;
+  width: 100%;
   transform-origin: top left;
   transform: skew(-30deg);
   background: rgb(124, 187, 142);
