@@ -21,6 +21,10 @@ const links = [
     label: "DETAILS",
     route: "/details",
   },
+  {
+    label: "HOTELS",
+    route: "/hotels",
+  },
 ]
 
 export function Header() {

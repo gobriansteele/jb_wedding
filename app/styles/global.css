@@ -328,6 +328,10 @@ ul.menu-wrap {
   font-weight: 600;
 }
 
+.transparent {
+  opacity: 0.4;
+}
+
 @font-face {
   font-family: "Tangerine";
   src: url("/fonts/Tangerine-Regular.ttf") format("truetype");
@@ -336,13 +340,13 @@ ul.menu-wrap {
 }
 @font-face {
   font-family: "SourceSerifPro";
-  src: url("/fonts/SoureSerifPro-Light.ttf") format("truetype");
+  src: url("/fonts/SourceSerifPro-Light.ttf") format("truetype");
   font-display: regular;
   font-weight: 400;
 }
 @font-face {
   font-family: "SourceSerifPro";
-  src: url("/fonts/SoureSerifPro-Regular.ttf") format("truetype");
+  src: url("/fonts/SourceSerifPro-Regular.ttf") format("truetype");
   font-display: regular;
   font-weight: 600;
 }
