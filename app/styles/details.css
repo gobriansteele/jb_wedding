@@ -7,6 +7,12 @@
   position: relative;
 }
 
+@media screen and (max-width: 650px) {
+  .hero-image-wrap {
+    background-position: 85% 25%;
+  }
+}
+
 .hero-image-overlay {
   position: absolute;
   width: 100%;
