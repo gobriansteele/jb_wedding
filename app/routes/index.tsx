@@ -63,7 +63,6 @@ export default function IndexRoute() {
       <div className="index-content-grid-container">
         <div className="index-content-container">
           <h1 className="global-headline index-headline">Jackie &amp; Brian</h1>
-          <h2 className="index-subheadline"></h2>
           <h3 className="index-info">
             Napa Valley, California
             <br />

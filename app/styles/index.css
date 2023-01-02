@@ -60,9 +60,10 @@ html {
 
 .index-headline {
   color: #fff;
-  font-size: 8rem;
+  font-size: 6rem;
   order: 1;
   animation: 1s ease-in 1 fadeIn;
+  line-height: 1;
 }
 
 .index-content-container h2,
@@ -81,9 +82,9 @@ h2.index-subheadline {
 .index-info {
   font-family: Tangerine;
   order: 2;
-  margin-block-start: -10px;
+  margin-block-start: 24px;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #fff;
   animation: 4s ease-in 1 fadeIn;
   line-height: 1.25;
