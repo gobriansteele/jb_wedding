@@ -65,9 +65,9 @@ export default function IndexRoute() {
           <h1 className="global-headline index-headline">Jackie &amp; Brian</h1>
           <h2 className="index-subheadline"></h2>
           <h3 className="index-info">
-            Napa Valley, CA
+            Napa Valley, California
             <br />
-            4.2.2023
+            <span className="index-date">April 2nd, 2023</span>
           </h3>
         </div>
       </div>
