@@ -75,9 +75,9 @@
 }
 
 a,
-a:visited {
+.details-wrap a:visited {
   color: rgb(124, 187, 142);
 }
-a:hover {
+.details-wrap a:hover {
   text-decoration: underline;
 }
