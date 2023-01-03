@@ -59,6 +59,17 @@ export default function OurStory() {
             to bring a sweater or light jacket just in case. And don't forget
             your sunglasses!
           </p>
+          <h3 className="details-subheading">Gifts</h3>
+          <p>
+            Please, no gifts. We're excited for your presence, not presents.
+          </p>
+          <p>
+            In lieu of gifts, consider making a donation to your favorite
+            charity, or a contribution to our{" "}
+            <a href="https://zola.com/registry/jackieandbrianapril2">
+              honeymoon fund.
+            </a>
+          </p>
         </div>
         <div className="details-content-wrap">
           <h2 className="details-section-heading">Questions</h2>
