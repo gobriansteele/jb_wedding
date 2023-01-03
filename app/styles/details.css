@@ -74,6 +74,10 @@
   margin-inline-end: 5px;
 }
 
-a {
+a,
+a:visited {
   color: rgb(124, 187, 142);
+}
+a:hover {
+  text-decoration: underline;
 }
